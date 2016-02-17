@@ -1,0 +1,23 @@
+{
+  "name": "cometd-transport-jquery",
+  "version": "0.0.1",
+  "description": "jQuery-based transports for CometD.",
+  "main": "lib/index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seansfkelley/cometd-transport-jquery.git"
+  },
+  "author": "seansfkelley@gmail.com",
+  "license": "n/a",
+  "bugs": {
+    "url": "https://github.com/seansfkelley/cometd-transport-jquery/issues"
+  },
+  "homepage": "https://github.com/seansfkelley/cometd-transport-jquery#readme",
+  "keywords": [
+    "cometd",
+    "transport",
+    "jquery"
+  ]
+}
