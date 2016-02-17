@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "description": "jQuery-based transports for CometD.",
   "main": "lib/index.js",
-  "scripts": {},
+  "scripts": {
+    "build:dist": "browserify src/index.js --standalone jQueryTransport --outfile dist/cometd-transport-jquery.js",
+    "build:lib": "babel src --out-dir lib",
+    "prepublish": "npm run build:dist && npm run build:lib"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seansfkelley/cometd-transport-jquery.git"
@@ -19,8 +23,25 @@
     "transport",
     "jquery"
   ],
+  "browserify": {
+    "transform": [ "babelify", "browserify-shim" ]
+  },
+  "babel": {
+    "presets": [ "es2015" ]
+  },
+  "browserify-shim": {
+    "cometd": "global:CometD",
+    "jquery": "global:jQuery"
+  },
   "peerDependencies": {
     "cometd": "^0.0.1",
     "jquery": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "browserify-shim": "^3.8.12"
   }
 }
